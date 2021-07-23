@@ -1,6 +1,5 @@
 package app.riju.retrofit_crud;
 
-import app.riju.retrofit_crud.ModelResponse.Api;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

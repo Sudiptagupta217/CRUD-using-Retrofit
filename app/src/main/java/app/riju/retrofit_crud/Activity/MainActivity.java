@@ -100,12 +100,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         call.enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-
                 RegisterResponse registerResponse = response.body();
                 if (response.isSuccessful()) {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
                     Toast.makeText(MainActivity.this, registerResponse.getMsg(), Toast.LENGTH_SHORT).show();
-                }
-                else{
+                } else {
                     Toast.makeText(MainActivity.this, registerResponse.getMsg(), Toast.LENGTH_SHORT).show();
                 }
             }

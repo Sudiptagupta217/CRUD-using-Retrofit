@@ -3,6 +3,7 @@ package app.riju.retrofit_crud.ModelResponse;
 import com.google.gson.annotations.SerializedName;
 
 public class RegisterResponse {
+
     String error;
     @SerializedName("message")
     String msg;

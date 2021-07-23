@@ -55,7 +55,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/loginBtnok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordLayout"
@@ -70,7 +70,7 @@
         android:id="@+id/registerLink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/loginBtn"
+        android:layout_below="@+id/loginBtnok"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="10dp"
         android:gravity="right"
