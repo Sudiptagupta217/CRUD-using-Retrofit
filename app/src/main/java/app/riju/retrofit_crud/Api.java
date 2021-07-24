@@ -34,6 +34,20 @@ public interface Api {
             @Field("email") String email
     );
 
+    @FormUrlEncoded
+    @POST("updatepassword.php")
+    Call<RegisterResponse> updateUserPassword(
+            @Field("email") String email,
+            @Field("current") String currentPass,
+            @Field("new") String newPass
+    );
+    @FormUrlEncoded
+    @POST("deleteaccount.php")
+    Call<RegisterResponse> deleteAccount(
+            @Field("id") int userId
+    );
+
+
     @GET("fetchusers.php")
     Call<FetchUserResponse> fetchAllUsers();
 }

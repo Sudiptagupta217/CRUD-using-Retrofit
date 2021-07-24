@@ -18,7 +18,7 @@ public class SharedPreferenceManager {
 
     public void saveUser(User user) {
         sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        editor=sharedPreferences.edit();
+        editor = sharedPreferences.edit();
         editor.putInt("id", user.getId());
         editor.putString("username", user.getUsername());
         editor.putString("email", user.getEmail());
@@ -39,7 +39,7 @@ public class SharedPreferenceManager {
                 sharedPreferences.getString("email", null));
     }
 
-    private void loggedOut() {
+    public void loggedOut() {
         sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         editor.clear();
